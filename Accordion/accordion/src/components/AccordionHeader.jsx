@@ -8,11 +8,15 @@ const AccordionHeader = ({
 }) => {
   return (
     <div
-      className="flex w-full px-10 py-5 items-center m-2 border shadow-lg justify-between cursor-pointer hover:bg-slate-100"
+      className={`flex w-full px-10 py-5 items-center mb-2 box-border ${
+        pos !== currentActiveAccordionPos
+          ? "border shadow-lg hover:bg-slate-100"
+          : ""
+      } justify-between cursor-pointer `}
       onClick={() => handleClick(pos !== currentActiveAccordionPos ? pos : -1)}
     >
-      <h1 className="w-1/12">{pos + 1}</h1>
-      <h1 className="w-10/12">{data}</h1>
+      <h1 className="w-1/12 text-lg ">{pos + 1}</h1>
+      <h1 className="w-10/12 text-xl font-semibold">{data}</h1>
       <div className="self-end">
         {currentActiveAccordionPos !== pos ? (
           <svg

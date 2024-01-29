@@ -8,6 +8,7 @@ const Star = ({ full, onRatingSelect, index, onHover, color }) => {
         onHover(index);
       }}
       onMouseLeave={() => onHover(0)}
+      className="w-8"
     >
       {full ? (
         <svg

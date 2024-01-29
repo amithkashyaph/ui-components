@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import Star from "./Star";
+import PropTypes from "prop-types";
+
+StarRating.propTypes = {
+  maxRating: PropTypes.number,
+  color: PropTypes.string,
+  messages: PropTypes.array,
+};
 
 const StarRating = ({ maxRating, color, messages }) => {
   const [selectedStarRating, setSelectedStarRating] = useState(0);

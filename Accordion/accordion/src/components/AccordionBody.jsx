@@ -13,7 +13,7 @@ const AccordionBody = ({
     <div
       className={`${
         pos === currentActiveAccordionPos
-          ? "shadow-lg border-t-8 border-blue-500"
+          ? "shadow-lg border-t-4 border-blue-500"
           : ""
       } w-full`}
     >
